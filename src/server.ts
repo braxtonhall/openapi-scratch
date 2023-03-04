@@ -7,7 +7,8 @@ import { batchImport } from "./batchImport";
 const definition = require('./generated/openapi-spec.json');
 
 const getHandlers = async () => {
-	const requiredOperations = collect(definition, "operationId") as string[];
+	const requiredOperations = collect(definition, "operationId")
+		.filter((id): id is string => typeof id === "string");
 	const allImports = await batchImport(__dirname + "/routes");
 	return Object.fromEntries(
 		requiredOperations.map((operationId) => {
