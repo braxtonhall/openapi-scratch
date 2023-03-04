@@ -11,7 +11,8 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "build": "swagger-jsdoc -d src/routes/openapi-base.yaml src/routes/**/*.ts -o src/generated/openapi-spec.json && tsc"
+    "codegen": "swagger-jsdoc -d src/routes/openapi-base.yaml src/routes/**/*.ts -o src/generated/openapi-spec.json",
+    "build": "yarn codegen && tsc"
   },
   "dependencies": {
     "@hapi/hapi": "^21.3.0",
