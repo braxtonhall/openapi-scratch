@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist",
+		"declaration": true,
+		"experimentalDecorators": true,
+		"esModuleInterop": true,
+		"target": "ES2022",
+		"moduleResolution": "node",
+		"strict": false,
+		"module": "commonjs",
+		"types": [
+			"node",
+			"mocha"
+		],
+		"lib": [
+			"ES2021"
+		]
+	},
+	"include": [
+		"src",
+		"test"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

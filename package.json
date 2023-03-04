@@ -1,0 +1,32 @@
+{
+  "name": "ts-openapi-sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@asteasolutions/zod-to-openapi": "^4.4.1",
+    "openapi-typescript": "^6.1.1",
+    "openapi-zod-client": "^1.5.8",
+    "swagger-jsdoc": "^6.2.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "zod": "^3.20.6",
+    "zod-to-openapi": "^0.2.1"
+  },
+  "scripts": {
+    "spec": "swagger-jsdoc -d src/routes/openapi-base.yaml src/routes/**/*.ts -o src/generated/openapi-spec.json",
+    "to-zod": "openapi-zod-client src/generated/openapi-spec.yaml -o src/generated/index.ts",
+    "to-types": "openapi-typescript src/generated/openapi-spec.json --output src/generated/index.ts"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^21.3.0",
+    "@hapi/inert": "^7.0.1",
+    "@hapi/vision": "^7.0.1",
+    "@zodios/express": "^10.5.1",
+    "hapi": "^18.1.0",
+    "hapi-swagger": "^16.0.1",
+    "joi": "^17.8.3",
+    "joi-to-swagger": "^6.2.0",
+    "openapi-backend": "^5.8.0"
+  }
+}
