@@ -5,6 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^18.14.6",
+    "nodemon": "^2.0.21",
     "openapi-typescript": "^6.1.1",
     "swagger-jsdoc": "^6.2.8",
     "ts-node": "^10.9.1",
@@ -12,10 +13,22 @@
   },
   "scripts": {
     "codegen": "swagger-jsdoc -d src/routes/openapi-base.yaml src/routes/**/*.ts -o src/generated/openapi-spec.json",
-    "build": "yarn codegen && tsc"
+    "build": "yarn codegen && tsc",
+    "start": "yarn codegen && ts-node src/server.ts",
+    "watch": "nodemon"
   },
   "dependencies": {
     "@hapi/hapi": "^21.3.0",
     "openapi-backend": "^5.8.0"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      ".git",
+      "node_modules",
+      "**/generated/**"
+    ],
+    "ext": ".ts,.yaml",
+    "watch": ["src"],
+    "exec": "yarn start"
   }
 }
