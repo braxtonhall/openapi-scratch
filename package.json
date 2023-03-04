@@ -12,7 +12,9 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "codegen": "swagger-jsdoc -d src/routes/openapi-base.yaml src/routes/**/*.ts -o src/generated/openapi-spec.json",
+    "make-spec": "swagger-jsdoc -d src/routes/openapi-base.yaml src/routes/**/*.ts -o src/generated/openapi-spec.json",
+    "make-types": "openapi-typescript src/generated/openapi-spec.json --output src/generated/index.ts",
+    "codegen": "yarn make-spec && yarn make-types",
     "build": "yarn codegen && tsc",
     "start": "yarn codegen && ts-node src/server.ts",
     "watch": "nodemon"

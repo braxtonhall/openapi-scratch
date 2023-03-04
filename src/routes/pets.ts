@@ -91,6 +91,7 @@ export const listPets: Handler<"listPets"> = async (ctx, req) => {
  *               $ref: "#/components/schemas/Error"
  */
 export const makePet: Handler<"makePet"> = async (context, req) => {
+	const petId: number = req.payload.id;
 	return "makePet";
 };
 
