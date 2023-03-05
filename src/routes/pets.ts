@@ -1,20 +1,28 @@
-import {Request as HapiRequest} from '@hapi/hapi'
-import { components, operations, paths } from "../generated";
+import { operations } from "../generated";
 import { Context } from "openapi-backend";
 import * as Hapi from "@hapi/hapi";
 
-
-type Request<Op extends keyof operations> = HapiRequest & {
+type Request<Op extends keyof operations> = Hapi.Request & {
 	params: operations[Op] extends { parameters: { query: infer T } } ? T : never;
 	payload: operations[Op] extends { requestBody: { content: { "application/json": infer T } } } ? T : never;
 	headers: operations[Op] extends { parameters: { header: infer T } } ? T : never;
 }
 
+type PickContent<T> = T extends { content: Record<string, infer C> }
+	? C
+	: T extends Record<string, infer C>
+		? PickContent<C>
+		: never;
+
+type ResponseToolkit<Op extends keyof operations> = Omit<Hapi.ResponseToolkit, "response"> & {
+	response(value?: PickContent<operations[Op]>): Hapi.ResponseObject
+};
+
 // TODO get return type information!
 type Handler<Op extends keyof operations> = (
 	context: Context,
 	req: Request<Op>,
-	h?: Hapi.ResponseToolkit,
+	h?: ResponseToolkit<Op>,
 	err?: Error,
 ) => Promise<unknown>;
 
