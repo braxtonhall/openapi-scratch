@@ -2,7 +2,7 @@ import { operations } from "../generated";
 import { Context } from "openapi-backend";
 import * as Hapi from "@hapi/hapi";
 
-type Request<Op extends keyof operations> = Hapi.Request & {
+type Request<Op extends keyof operations> = Omit<Hapi.Request, 'params' | 'payload' | 'headers'> & {
 	params: operations[Op] extends { parameters: { query: infer T } } ? T : never;
 	payload: operations[Op] extends { requestBody: { content: { "application/json": infer T } } } ? T : never;
 	headers: operations[Op] extends { parameters: { header: infer T } } ? T : never;
