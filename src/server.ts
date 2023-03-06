@@ -3,13 +3,14 @@ import { OpenAPIBackend } from "openapi-backend";
 import * as Hapi from '@hapi/hapi';
 import { collect } from "./collect";
 import { batchImport } from "./batchImport";
+import path from "path";
 
 const definition = require('./generated/openapi-spec.json');
 
 const getHandlers = async () => {
 	const requiredOperations = collect(definition, "operationId")
 		.filter((id): id is string => typeof id === "string");
-	const allImports = await batchImport(__dirname + "/routes");
+	const allImports = await batchImport(path.resolve("./src/routes/pets"));
 	return Object.fromEntries(
 		requiredOperations.map((operationId) => {
 			const operations = collect(allImports, operationId)
