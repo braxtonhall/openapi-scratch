@@ -17,7 +17,7 @@ type PickContent<T> = T extends { content: Record<string, infer C> }
 		: never;
 
 type ResponseToolkit<Op extends Operation> = Omit<Hapi.ResponseToolkit, "response"> & {
-	response(value?: PickContent<operations[Op]>): Hapi.ResponseObject
+	response(value?: PickContent<operations[Op]['responses']>): Hapi.ResponseObject
 };
 
 // TODO get return type information!
