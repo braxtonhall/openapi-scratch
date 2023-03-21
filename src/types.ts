@@ -1,4 +1,4 @@
-import { components, operations } from "./generated";
+import { operations } from "./generated";
 import * as Hapi from "@hapi/hapi";
 import { Context } from "openapi-backend";
 
