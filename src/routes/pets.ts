@@ -1,4 +1,4 @@
-import { Handler, HandlerCollection } from "../types";
+import {Handler, HandlerCollection} from "../generated";
 
 /**
  * @swagger
@@ -36,7 +36,7 @@ import { Handler, HandlerCollection } from "../types";
  *               $ref: "#/components/schemas/Error"
  */
 export const listPets: Handler<"listPets"> = async (ctx, req) => {
-	return "listPets";
+	return [];
 };
 
 /**
@@ -70,7 +70,6 @@ export const listPets: Handler<"listPets"> = async (ctx, req) => {
  */
 export const makePet: Handler<"makePet"> = async (context, req) => {
 	const petId: number = req.payload.id;
-	return "makePet";
 };
 
 // Alternative export style for more concise typechecking!
