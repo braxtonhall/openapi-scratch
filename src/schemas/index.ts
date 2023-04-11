@@ -1,5 +1,6 @@
 import {z} from "zod";
-import {extendZodWithOpenApi} from "ts-openapi-backend";
+import {extendZodWithOpenApi} from "ts-lib-openapi-backend";
+
 extendZodWithOpenApi(z);
 
 export const Pet = z.object({

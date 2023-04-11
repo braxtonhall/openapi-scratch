@@ -70,6 +70,7 @@ export const listPets: Handler<"listPets"> = async (ctx, req) => {
  */
 export const makePet: Handler<"makePet"> = async (context, req) => {
 	const petId: number = req.payload.id;
+	return [];
 };
 
 // Alternative export style for more concise typechecking!

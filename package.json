@@ -10,12 +10,12 @@
 		"nodemon": "^2.0.21",
 		"pinst": ">=2",
 		"prettier": "^2.8.6",
+		"ts-lib-openapi-backend": "*",
 		"ts-node": "^10.9.1",
-		"ts-openapi-backend": "*",
 		"typescript": "^4.9.5"
 	},
 	"scripts": {
-		"codegen": "yarn ts-node node_modules/ts-openapi-backend/bin/ts-openapi-codegen.ts -s src/schemas -o src/generated/openapi-spec.json -p src/routes/**/*.ts src/routes/openapi-base.yaml src/generated/index.ts",
+		"codegen": "yarn ts-node node_modules/ts-lib-openapi-backend/bin/ts-openapi-codegen.ts -s src/schemas -o src/generated/openapi-spec.json -p src/routes/**/*.ts src/routes/openapi-base.yaml src/generated/index.ts",
 		"build": "yarn codegen && tsc",
 		"start:dev": "yarn codegen && ts-node src/server.ts",
 		"watch": "nodemon",
@@ -39,9 +39,6 @@
 		"exec": "yarn start:dev"
 	},
 	"packageManager": "yarn@3.5.0",
-	"resolutions": {
-		"ts-openapi-backend": "portal:/Users/bhall/Documents/ts-openapi-backend"
-	},
 	"prettier": {
 		"printWidth": 120,
 		"useTabs": true,
@@ -50,5 +47,8 @@
 	},
 	"lint-staged": {
 		"*.{yml,json,ts,js,md}": "prettier --write"
+	},
+	"resolutions": {
+		"ts-lib-openapi-backend": "portal:/Users/bhall/Documents/ts-openapi-backend"
 	}
 }
