@@ -15,7 +15,7 @@
 		"typescript": "^4.9.5"
 	},
 	"scripts": {
-		"codegen": "yarn ts-node node_modules/ts-lib-openapi-backend/bin/ts-openapi-codegen.ts -s src/schemas -o src/generated/openapi-spec.json -p src/routes/**/*.ts src/routes/openapi-base.yaml src/generated/index.ts",
+		"codegen": "yarn ts-node node_modules/ts-lib-openapi-backend/bin/ts-openapi-codegen.ts -s src/schemas -o src/generated/openapi-spec.json -p src/routes/**/*.ts src/routes/openapi-base.yaml src/generated/index.ts -r src/old-routes",
 		"build": "yarn codegen && tsc",
 		"start:dev": "yarn codegen && ts-node src/server.ts",
 		"watch": "nodemon",
