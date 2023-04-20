@@ -2639,9 +2639,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-lib-openapi-backend@npm:^1.0.0-beta.6":
-  version: 1.0.0-beta.6
-  resolution: "ts-lib-openapi-backend@npm:1.0.0-beta.6"
+"ts-lib-openapi-backend@npm:^1.0.0-beta.10":
+  version: 1.0.0-beta.10
+  resolution: "ts-lib-openapi-backend@npm:1.0.0-beta.10"
   dependencies:
     "@asteasolutions/zod-to-openapi": ^4.5.0
     "@hapi/boom": ^10.0.1
@@ -2660,7 +2660,7 @@ __metadata:
     zod: ^3.21.4
   bin:
     ts-lib-openapi-backend: bin/ts-openapi-codegen.js
-  checksum: bdeac7faea439f6ece339106b4cc01a22159fb47719f59d517413deda597a904821c7b4ac890232bae58f804bf4c5f76ec5611ed1aea64b517df21c3bbfd7d82
+  checksum: 4d68982de53e767dcb0e47a577b347aa1e9f50e5e81464231b31416f27b50730cc65945349af536dba58f6e753b3c9b7fcb7c54e4898f297d429238f5fb4f454
   languageName: node
   linkType: hard
 
@@ -2713,7 +2713,7 @@ __metadata:
     nodemon: ^2.0.21
     pinst: ">=2"
     prettier: ^2.8.6
-    ts-lib-openapi-backend: ^1.0.0-beta.6
+    ts-lib-openapi-backend: ^1.0.0-beta.10
     ts-node: ^10.9.1
     typescript: ^4.9.5
   languageName: unknown
