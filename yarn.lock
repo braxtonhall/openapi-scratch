@@ -235,6 +235,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hapi/hoek@npm:^10.0.1":
+  version: 10.0.1
+  resolution: "@hapi/hoek@npm:10.0.1"
+  checksum: 6dbcd7ae138fc751b2d81169516668bc6e4b878bb2bfdfab5eb3d51fdfd361544cc791ff12375587bf71dbeb801810cd62105f5d744dfa457140fb1709bbea6f
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^11.0.2":
   version: 11.0.2
   resolution: "@hapi/hoek@npm:11.0.2"
@@ -644,7 +651,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^8.0.0, ajv@npm:^8.1.0, ajv@npm:^8.6.2":
+"ajv@npm:^8.0.0, ajv@npm:^8.1.0, ajv@npm:^8.12.0, ajv@npm:^8.6.2":
   version: 8.12.0
   resolution: "ajv@npm:8.12.0"
   dependencies:
@@ -733,6 +740,15 @@ __metadata:
   version: 4.1.3
   resolution: "arg@npm:4.1.3"
   checksum: 544af8dd3f60546d3e4aff084d451b96961d2267d668670199692f8d054f0415d86fc5497d0e641e91546f0aa920e7c29e5250e99fc89f5552a34b5d93b77f43
+  languageName: node
+  linkType: hard
+
+"argparse@npm:^1.0.7":
+  version: 1.0.10
+  resolution: "argparse@npm:1.0.10"
+  dependencies:
+    sprintf-js: ~1.0.2
+  checksum: 7ca6e45583a28de7258e39e13d81e925cfa25d7d4aacbf806a382d3c02fcb13403a07fb8aeef949f10a7cfe4a62da0e2e807b348a5980554cc28ee573ef95945
   languageName: node
   linkType: hard
 
@@ -952,6 +968,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"combinations@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "combinations@npm:1.0.0"
+  checksum: 1e04f44b7f56396efe57d9ba2e037dc5ff4367f5a919f16eb9344c7c5e5417447bf23f68f57ac69656811ee50343d2575b0c23f1d70cc3156e871935578c9cdf
+  languageName: node
+  linkType: hard
+
 "commander@npm:6.2.0":
   version: 6.2.0
   resolution: "commander@npm:6.2.0"
@@ -1114,6 +1137,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"esprima@npm:^4.0.0":
+  version: 4.0.1
+  resolution: "esprima@npm:4.0.1"
+  bin:
+    esparse: ./bin/esparse.js
+    esvalidate: ./bin/esvalidate.js
+  checksum: b45bc805a613dbea2835278c306b91aff6173c8d034223fa81498c77dcbce3b2931bf6006db816f62eacd9fd4ea975dfd85a5b7f3c6402cfd050d4ca3c13a628
+  languageName: node
+  linkType: hard
+
 "esutils@npm:^2.0.2":
   version: 2.0.3
   resolution: "esutils@npm:2.0.3"
@@ -1173,6 +1206,13 @@ __metadata:
   dependencies:
     to-regex-range: ^5.0.1
   checksum: cc283f4e65b504259e64fd969bcf4def4eb08d85565e906b7d36516e87819db52029a76b6363d0f02d0d532f0033c9603b9e2d943d56ee3b0d4f7ad3328ff917
+  languageName: node
+  linkType: hard
+
+"format-util@npm:^1.0.3":
+  version: 1.0.5
+  resolution: "format-util@npm:1.0.5"
+  checksum: 0c8622e54ad899ca184ff0b4999e9ff9567965051bade140911209d60554c2ea4d43075763c1cf574d2f740966afe46469c9284357919505cdddf1a0b65ff85c
   languageName: node
   linkType: hard
 
@@ -1320,6 +1360,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"handlebars@npm:^4.7.7":
+  version: 4.7.7
+  resolution: "handlebars@npm:4.7.7"
+  dependencies:
+    minimist: ^1.2.5
+    neo-async: ^2.6.0
+    source-map: ^0.6.1
+    uglify-js: ^3.1.4
+    wordwrap: ^1.0.0
+  dependenciesMeta:
+    uglify-js:
+      optional: true
+  bin:
+    handlebars: bin/handlebars
+  checksum: 1e79a43f5e18d15742977cb987923eab3e2a8f44f2d9d340982bcb69e1735ed049226e534d7c1074eaddaf37e4fb4f471a8adb71cddd5bc8cf3f894241df5cee
+  languageName: node
+  linkType: hard
+
+"hapi-swagger@npm:^16.0.1":
+  version: 16.0.1
+  resolution: "hapi-swagger@npm:16.0.1"
+  dependencies:
+    "@hapi/boom": ^10.0.0
+    "@hapi/hoek": ^10.0.1
+    handlebars: ^4.7.7
+    http-status: ^1.5.3
+    json-schema-ref-parser: ^6.1.0
+    swagger-parser: ^10.0.3
+    swagger-ui-dist: ^4.15.3
+  peerDependencies:
+    "@hapi/hapi": ">=20.x.x"
+    joi: 17.x
+  checksum: 3ce3fc879da14ee1b438fc133a0f6b355b7a89e13c1120e5fb8b6191d63ccba3747f29296ad9e442ca7d4a6d54631192e9469ef66fb1729c655c256740efccc0
+  languageName: node
+  linkType: hard
+
 "has-flag@npm:^3.0.0":
   version: 3.0.0
   resolution: "has-flag@npm:3.0.0"
@@ -1365,6 +1441,13 @@ __metadata:
     agent-base: 6
     debug: 4
   checksum: e2ee1ff1656a131953839b2a19cd1f3a52d97c25ba87bd2559af6ae87114abf60971e498021f9b73f9fd78aea8876d1fb0d4656aac8a03c6caa9fc175f22b786
+  languageName: node
+  linkType: hard
+
+"http-status@npm:^1.5.3":
+  version: 1.6.2
+  resolution: "http-status@npm:1.6.2"
+  checksum: 340495d01c94df580db2cab1a25576b2ff5d5792a5829a9fe4af9e73cfda2187332feb3df120a06e1bea5dc9579d08127125e7e7fc886d7d5289c156268d2ed8
   languageName: node
   linkType: hard
 
@@ -1531,6 +1614,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"joi-route-to-swagger@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "joi-route-to-swagger@npm:3.0.0"
+  dependencies:
+    joi-to-json: ^3.1.0
+    lodash: ^4.17.21
+  checksum: 08aa29d2e1c7a327a622764e33bd00a81ee16bb9bd183e31b84d45f6dd6ababb916ec26745883c55c1f86872c622ba29dbc5217f49c147a075a69673b890e919
+  languageName: node
+  linkType: hard
+
+"joi-to-json@npm:^3.1.0, joi-to-json@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "joi-to-json@npm:3.1.2"
+  dependencies:
+    combinations: ^1.0.0
+    lodash: ^4.17.21
+    semver-compare: ^1.0.0
+  checksum: f3e1d52c03674f1d53b698d331e48f45cda9cf0a60a13a54b44069da596288bacfdf5be0fb70d8dfc25eadea1243b26dcf050fb21c67dcf6ad693323d7f99e0b
+  languageName: node
+  linkType: hard
+
+"joi-to-swagger@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "joi-to-swagger@npm:6.2.0"
+  dependencies:
+    lodash: ^4.17.21
+  peerDependencies:
+    joi: ">=17.1.1"
+  checksum: efadc9c69b53a54d5c2f417fe6155b2a315d084dc6e0b4ee27e093ca614fd219729ba69c12ee70f08ff6a593dec65c8d424990eebbecb4f8a3f31d60d44e4c7a
+  languageName: node
+  linkType: hard
+
 "joi@npm:^17.9.1":
   version: 17.9.1
   resolution: "joi@npm:17.9.1"
@@ -1544,6 +1659,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"js-yaml@npm:^3.12.1":
+  version: 3.14.1
+  resolution: "js-yaml@npm:3.14.1"
+  dependencies:
+    argparse: ^1.0.7
+    esprima: ^4.0.0
+  bin:
+    js-yaml: bin/js-yaml.js
+  checksum: bef146085f472d44dee30ec34e5cf36bf89164f5d585435a3d3da89e52622dff0b188a580e4ad091c3341889e14cb88cac6e4deb16dc5b1e9623bb0601fc255c
+  languageName: node
+  linkType: hard
+
 "js-yaml@npm:^4.1.0":
   version: 4.1.0
   resolution: "js-yaml@npm:4.1.0"
@@ -1552,6 +1679,17 @@ __metadata:
   bin:
     js-yaml: bin/js-yaml.js
   checksum: c7830dfd456c3ef2c6e355cc5a92e6700ceafa1d14bba54497b34a99f0376cecbb3e9ac14d3e5849b426d5a5140709a66237a8c991c675431271c4ce5504151a
+  languageName: node
+  linkType: hard
+
+"json-schema-ref-parser@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "json-schema-ref-parser@npm:6.1.0"
+  dependencies:
+    call-me-maybe: ^1.0.1
+    js-yaml: ^3.12.1
+    ono: ^4.0.11
+  checksum: 03944fcb5b3d73181b5c90ec06a8b0fd1f744f366b6f956e1df9d42117172427b7476ff82c3def0e932272dfdfec77c14e024ca67a5dfc36175eb272e87421dd
   languageName: node
   linkType: hard
 
@@ -1797,6 +1935,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"minimist@npm:^1.2.5":
+  version: 1.2.8
+  resolution: "minimist@npm:1.2.8"
+  checksum: 75a6d645fb122dad29c06a7597bddea977258957ed88d7a6df59b5cd3fe4a527e253e9bbf2e783e4b73657f9098b96a5fe96ab8a113655d4109108577ecf85b0
+  languageName: node
+  linkType: hard
+
 "minipass-collect@npm:^1.0.2":
   version: 1.0.2
   resolution: "minipass-collect@npm:1.0.2"
@@ -1910,6 +2055,13 @@ __metadata:
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
   checksum: b8ffeb1e262eff7968fc90a2b6767b04cfd9842582a9d0ece0af7049537266e7b2506dfb1d107a32f06dd849ab2aea834d5830f7f4d0e5cb7d36e1ae55d021d9
+  languageName: node
+  linkType: hard
+
+"neo-async@npm:^2.6.0":
+  version: 2.6.2
+  resolution: "neo-async@npm:2.6.2"
+  checksum: deac9f8d00eda7b2e5cd1b2549e26e10a0faa70adaa6fdadca701cc55f49ee9018e427f424bac0c790b7c7e2d3068db97f3093f1093975f2acb8f8818b936ed9
   languageName: node
   linkType: hard
 
@@ -2048,6 +2200,15 @@ __metadata:
   dependencies:
     mimic-fn: ^4.0.0
   checksum: 0846ce78e440841335d4e9182ef69d5762e9f38aa7499b19f42ea1c4cd40f0b4446094c455c713f9adac3f4ae86f613bb5e30c99e52652764d06a89f709b3788
+  languageName: node
+  linkType: hard
+
+"ono@npm:^4.0.11":
+  version: 4.0.11
+  resolution: "ono@npm:4.0.11"
+  dependencies:
+    format-util: ^1.0.3
+  checksum: fabfdddb2e5e9875098e628871c86daf2fe0d1cbbfcdcc33093f47911eb4c386444410bc2bd3f6af9ff484deed46c6f9d88c8d49107ddec5350a9b089b283dd6
   languageName: node
   linkType: hard
 
@@ -2325,6 +2486,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semver-compare@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "semver-compare@npm:1.0.0"
+  checksum: dd1d7e2909744cf2cf71864ac718efc990297f9de2913b68e41a214319e70174b1d1793ac16e31183b128c2b9812541300cb324db8168e6cf6b570703b171c68
+  languageName: node
+  linkType: hard
+
 "semver@npm:^5.7.1":
   version: 5.7.1
   resolution: "semver@npm:5.7.1"
@@ -2464,6 +2632,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"source-map@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "source-map@npm:0.6.1"
+  checksum: 59ce8640cf3f3124f64ac289012c2b8bd377c238e316fb323ea22fbfe83da07d81e000071d7242cad7a23cd91c7de98e4df8830ec3f133cb6133a5f6e9f67bc2
+  languageName: node
+  linkType: hard
+
+"sprintf-js@npm:~1.0.2":
+  version: 1.0.3
+  resolution: "sprintf-js@npm:1.0.3"
+  checksum: 19d79aec211f09b99ec3099b5b2ae2f6e9cdefe50bc91ac4c69144b6d3928a640bb6ae5b3def70c2e85a2c3d9f5ec2719921e3a59d3ca3ef4b2fd1a4656a0df3
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^9.0.0":
   version: 9.0.1
   resolution: "ssri@npm:9.0.1"
@@ -2584,6 +2766,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swagger-ui-dist@npm:^4.15.3":
+  version: 4.18.2
+  resolution: "swagger-ui-dist@npm:4.18.2"
+  checksum: 3d3e801104af53a58662303aa82df81510cece64a28422e6de02b5d22eb5f6a354f3c3ab80d12f72442e0ec8cbae9122767d7f8476c4d4a21d5353163bc659a7
+  languageName: node
+  linkType: hard
+
 "tar@npm:^6.1.11, tar@npm:^6.1.2":
   version: 6.1.13
   resolution: "tar@npm:6.1.13"
@@ -2639,16 +2828,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-lib-openapi-backend@npm:^1.0.0-beta.10":
-  version: 1.0.0-beta.10
-  resolution: "ts-lib-openapi-backend@npm:1.0.0-beta.10"
+"ts-lib-openapi-backend@portal:/Users/bhall/Documents/ts-openapi-backend::locator=ts-openapi-sample%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "ts-lib-openapi-backend@portal:/Users/bhall/Documents/ts-openapi-backend::locator=ts-openapi-sample%40workspace%3A."
   dependencies:
     "@asteasolutions/zod-to-openapi": ^4.5.0
     "@hapi/boom": ^10.0.1
     "@hapi/hapi": ^21.3.1
+    ajv: ^8.12.0
     commander: ^10.0.0
     fs-extra: ^11.1.0
+    hapi-swagger: ^16.0.1
     joi: ^17.9.1
+    joi-route-to-swagger: ^3.0.0
+    joi-to-json: ^3.1.2
+    joi-to-swagger: ^6.2.0
     lodash: ^4.17.21
     luxon: ^3.3.0
     node-fetch: 2.6.7
@@ -2660,9 +2854,8 @@ __metadata:
     zod: ^3.21.4
   bin:
     ts-lib-openapi-backend: bin/ts-openapi-codegen.js
-  checksum: 4d68982de53e767dcb0e47a577b347aa1e9f50e5e81464231b31416f27b50730cc65945349af536dba58f6e753b3c9b7fcb7c54e4898f297d429238f5fb4f454
   languageName: node
-  linkType: hard
+  linkType: soft
 
 "ts-node@npm:^10.9.1":
   version: 10.9.1
@@ -2713,7 +2906,7 @@ __metadata:
     nodemon: ^2.0.21
     pinst: ">=2"
     prettier: ^2.8.6
-    ts-lib-openapi-backend: ^1.0.0-beta.10
+    ts-lib-openapi-backend: "*"
     ts-node: ^10.9.1
     typescript: ^4.9.5
   languageName: unknown
@@ -2750,6 +2943,15 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: ab417a2f398380c90a6cf5a5f74badd17866adf57f1165617d6a551f059c3ba0a3e4da0d147b3ac5681db9ac76a303c5876394b13b3de75fdd5b1eaa06181c9d
+  languageName: node
+  linkType: hard
+
+"uglify-js@npm:^3.1.4":
+  version: 3.17.4
+  resolution: "uglify-js@npm:3.17.4"
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 7b3897df38b6fc7d7d9f4dcd658599d81aa2b1fb0d074829dd4e5290f7318dbca1f4af2f45acb833b95b1fe0ed4698662ab61b87e94328eb4c0a0d3435baf924
   languageName: node
   linkType: hard
 
@@ -2858,6 +3060,13 @@ __metadata:
   dependencies:
     string-width: ^1.0.2 || 2 || 3 || 4
   checksum: d5fc37cd561f9daee3c80e03b92ed3e84d80dde3365a8767263d03dacfc8fa06b065ffe1df00d8c2a09f731482fcacae745abfbb478d4af36d0a891fad4834d3
+  languageName: node
+  linkType: hard
+
+"wordwrap@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "wordwrap@npm:1.0.0"
+  checksum: 2a44b2788165d0a3de71fd517d4880a8e20ea3a82c080ce46e294f0b68b69a2e49cff5f99c600e275c698a90d12c5ea32aff06c311f0db2eb3f1201f3e7b2a04
   languageName: node
   linkType: hard
 

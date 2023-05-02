@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"outDir": "./dist",
+		"resolveJsonModule": true,
 		"declaration": true,
 		"experimentalDecorators": true,
 		"esModuleInterop": true,

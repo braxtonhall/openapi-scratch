@@ -1,4 +1,4 @@
-import {Handler, HandlerCollection} from "../generated";
+import {Handler, HandlerCollection, OperationId} from "../generated";
 
 /**
  * @swagger
@@ -35,7 +35,9 @@ import {Handler, HandlerCollection} from "../generated";
  *             schema:
  *               $ref: "#/components/schemas/Error"
  */
-export const listPets: Handler<"listPets"> = async (ctx, req) => {
+
+export const listPets: Handler<"listPets"> = async (req, h) => {
+	h.response<200>().code(200).header("x-next", "");
 	return [];
 };
 
@@ -69,7 +71,7 @@ export const listPets: Handler<"listPets"> = async (ctx, req) => {
  *               $ref: "#/components/schemas/Error"
  */
 export const makePet: Handler<"makePet"> = async (context, req) => {
-	const petId: number = req.payload.id;
+	// const petId: number = req.payload.id;
 	return [];
 };
 
